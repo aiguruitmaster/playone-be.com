@@ -1,17 +1,12 @@
 <!DOCTYPE html>
-<html lang="be" class="scroll-smooth">
+<html lang="nl" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PlayOne Casino FAQ - Account Verification, Withdrawals & Safety</title>
-    <meta name="description" content="Get answers to common questions about PlayOne Casino including KYC verification, deposit methods, withdrawal times, security measures, and game fairness.">
+    <title>PlayOne FAQ - Veelgestelde Vragen | Alles Over Veiligheid</title>
+    <meta name="description" content="Vind antwoorden op al je vragen over PlayOne. Lees meer over accountverificatie, opnames, stortingsmethoden, veiligheid en eerlijkheid.">
     
     
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -19,326 +14,332 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
+    <!-- Schema.org -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
+      "name": "PlayOne FAQ - Veelgestelde Vragen | Alles Over Veiligheid",
+      "description": "Vind antwoorden op al je vragen over PlayOne. Lees meer over accountverificatie, opnames, stortingsmethoden, veiligheid en eerlijkheid.",
       "datePublished": "2026-03-25"
     }
     </script>
 
     <script>
         tailwind.config = {
-            darkMode: 'class',
             theme: {
                 extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        display: ['Syncopate', 'sans-serif'],
-                    },
                     colors: {
                         brand: {
-                            50: '#f0fdf4',
-                            100: '#dcfce7',
-                            200: '#bbf7d0',
-                            300: '#86efac',
-                            400: '#4ade80',
-                            500: '#22c55e', // Neon Green
-                            600: '#16a34a',
-                            700: '#15803d',
-                            800: '#166534',
-                            900: '#14532d',
-                            950: '#052e16',
-                        },
-                        dark: {
-                            900: '#121212',
-                            800: '#1e1e1e',
-                            700: '#2d2d2d',
+                            dark: '#09090b',
+                            card: '#18181b',
+                            border: '#27272a',
+                            accent: '#22c55e', // Neon Green matching reference
+                            accentHover: '#16a34a'
                         }
                     },
-                    animation: {
-                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                        'float': 'float 6s ease-in-out infinite',
-                    },
-                    keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-10px)' },
-                        }
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        display: ['Rajdhani', 'system-ui', 'sans-serif'] // Tech/Gaming feel
                     }
                 }
             }
         }
     </script>
-
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Rajdhani:wght@600;700&display=swap');
+        
         body {
-            background-color: #09090b; /* zinc-950 */
-            color: #f4f4f5; /* zinc-50 */
-            overflow-x: hidden;
+            background-color: #09090b;
+            color: #f4f4f5;
         }
         
-        .neon-text {
-            text-shadow: 0 0 10px rgba(34, 197, 94, 0.5), 0 0 20px rgba(34, 197, 94, 0.3);
+        .text-glow {
+            text-shadow: 0 0 10px rgba(34, 197, 94, 0.5);
         }
         
-        .neon-box {
-            box-shadow: 0 0 15px rgba(34, 197, 94, 0.2);
-            border: 1px solid rgba(34, 197, 94, 0.3);
-        }
-        
-        .hero-bg {
-            background: radial-gradient(circle at 50% 0%, rgba(34, 197, 94, 0.15) 0%, rgba(9, 9, 11, 1) 60%);
+        .box-glow:hover {
+            box-shadow: 0 0 20px rgba(34, 197, 94, 0.2);
         }
 
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #09090b;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #27272a;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #22c55e;
+        /* Ensuring the empty img tag behaves within the grid */
+        .auto-slot-img {
+            background-color: #18181b;
+            background-image: linear-gradient(45deg, #18181b 25%, #27272a 25%, #27272a 50%, #18181b 50%, #18181b 75%, #27272a 75%, #27272a 100%);
+            background-size: 20px 20px;
         }
     </style>
 
 <link rel="canonical" href="https://playone-be.com/faq/" />
 </head>
-<body class="antialiased selection:bg-brand-500 selection:text-black">
+<body class="antialiased flex flex-col min-h-screen">
 
     <!-- Sticky Header -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-zinc-950/80 backdrop-blur-lg border-b border-zinc-800 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <!-- Logo -->
-                <div class="flex-shrink-0 flex items-center gap-2">
-                    <div class="w-8 h-8 bg-brand-500 rounded-sm transform -skew-x-12 flex items-center justify-center">
-                        <i data-lucide="zap" class="w-5 h-5 text-black"></i>
-                    </div>
-                    <span class="font-display font-bold text-2xl tracking-wider text-white italic brand-name-inject">PLAYONE</span>
-                </div>
-
-                <!-- Desktop Nav -->
-                <nav class="hidden md:flex space-x-8">
-                    <a href="index.html" class="text-zinc-300 hover:text-brand-400 font-medium transition-colors">Галоўная</a>
-                    <a href="promotions.html" class="text-zinc-300 hover:text-brand-400 font-medium transition-colors">Акцыі</a>
-                    <a href="reviews.html" class="text-zinc-300 hover:text-brand-400 font-medium transition-colors">Водгукі</a>
-                    <a href="faq.html" class="text-zinc-300 hover:text-brand-400 font-medium transition-colors">Частыя пытанні</a>
-                </nav>
-
-                <!-- Auth Buttons -->
-                <div class="flex items-center space-x-4">
-                    <a href="#" class="brand-cta hidden sm:block text-zinc-300 hover:text-white font-medium px-4 py-2 transition-colors">Увайсці</a>
-                    <a href="#" class="brand-cta bg-brand-500 hover:bg-brand-400 text-black font-bold px-6 py-2.5 rounded-sm transform -skew-x-12 transition-all shadow-[0_0_15px_rgba(34,197,94,0.4)] hover:shadow-[0_0_25px_rgba(34,197,94,0.6)]">
-                        <span class="block transform skew-x-12">Зарэгістравацца</span>
-                    </a>
-                </div>
+    <header class="sticky top-0 z-50 bg-brand-dark/90 backdrop-blur-lg border-b border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Left: Brand Name -->
+            <div class="flex-shrink-0">
+                <a href="index.html" class="flex items-center gap-2">
+                    <i data-lucide="gamepad-2" class="w-8 h-8 text-brand-accent"></i>
+                    <span class="brand-name-display font-display font-bold italic text-3xl text-white tracking-wider uppercase text-glow">PlayOne</span>
+                </a>
             </div>
+
+            <!-- Middle: Desktop Navigation -->
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="index.html" class="text-sm font-semibold text-zinc-300 hover:text-brand-accent transition-colors uppercase tracking-wide">Home</a>
+                <a href="promotions.html" class="text-sm font-semibold text-zinc-300 hover:text-brand-accent transition-colors uppercase tracking-wide">Promoties</a>
+                <a href="reviews.html" class="text-sm font-semibold text-zinc-300 hover:text-brand-accent transition-colors uppercase tracking-wide">Beoordelingen</a>
+                <a href="faq.html" class="text-sm font-semibold text-zinc-300 hover:text-brand-accent transition-colors uppercase tracking-wide">FAQ</a>
+            </nav>
+
+            <!-- Right: Auth Buttons -->
+            <div class="flex items-center gap-4">
+                <a href="#" class="brand-cta hidden sm:flex items-center justify-center px-5 py-2.5 text-sm font-bold text-white border border-brand-border hover:border-brand-accent rounded-md transition-all">
+                    Inloggen
+                </a>
+                <a href="#" class="brand-cta flex items-center justify-center px-6 py-2.5 text-sm font-bold text-black bg-brand-accent hover:bg-brand-accentHover rounded-md shadow-[0_0_15px_rgba(34,197,94,0.4)] transition-all uppercase tracking-wide">
+                    Registreren
+                </a>
+            </div>
+            
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden hero-bg">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-900 border border-zinc-800 text-sm font-medium text-brand-400 mb-8">
-                <i data-lucide="shield-check" class="w-4 h-4"></i>
-                <span>Праверана ў 2026</span>
-            </div>
-            
-            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 text-white uppercase font-display italic">
-                Эксклюзіўны бонус ад <br/>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-brand-600 neon-text brand-name-inject">PLAYONE</span>
-            </h1>
-            
-            <p class="mt-4 text-xl md:text-3xl text-zinc-300 max-w-3xl mx-auto mb-10 font-bold">
-                Атрымайце <span class="text-brand-400 brand-bonus-inject">Шчодры Бонус</span> для новых гульцоў!
-            </p>
-            
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
-                <a href="#" class="brand-cta group relative inline-flex items-center justify-center px-10 py-5 text-lg font-bold text-black transition-all duration-200 bg-brand-500 font-display italic transform -skew-x-12 hover:bg-brand-400 shadow-[0_0_30px_rgba(34,197,94,0.5)] hover:shadow-[0_0_50px_rgba(34,197,94,0.7)]">
-                    <span class="block transform skew-x-12 flex items-center gap-3">
-                        <i data-lucide="play-circle" class="w-6 h-6"></i>
-                        ГУЛЯЦЬ ЗАРАЗ
-                    </span>
-                </a>
-            </div>
-            
-            <div class="mt-12 flex justify-center items-center gap-8 text-zinc-500 text-sm">
-                <div class="flex items-center gap-2"><i data-lucide="zap" class="w-4 h-4 text-brand-500"></i> Хуткая рэгістрацыя</div>
-                <div class="flex items-center gap-2"><i data-lucide="lock" class="w-4 h-4 text-brand-500"></i> 100% Бяспечна</div>
-            </div>
-        </div>
+    <main class="flex-grow">
         
-        <!-- Abstract Background Elements -->
-        <div class="absolute top-1/4 left-10 w-64 h-64 bg-brand-500/5 rounded-full blur-3xl animate-float"></div>
-        <div class="absolute bottom-1/4 right-10 w-80 h-80 bg-brand-500/5 rounded-full blur-3xl animate-float" style="animation-delay: 2s;"></div>
-    </section>
+        <!-- Hero Section -->
+        <section class="relative pt-24 pb-32 overflow-hidden">
+            <!-- Background Elements -->
+            <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-green-900/20 via-brand-dark to-brand-dark -z-10"></div>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-accent/5 rounded-full blur-3xl -z-10"></div>
 
-    <!-- Quick Benefits -->
-    <section class="py-12 bg-zinc-900 border-y border-zinc-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                <div class="p-6">
-                    <div class="mx-auto w-16 h-16 bg-zinc-950 border border-zinc-800 rounded-2xl flex items-center justify-center mb-4 transform rotate-3 hover:rotate-0 transition-transform">
-                        <i data-lucide="banknote" class="w-8 h-8 text-brand-400"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-2">Хуткія выплаты</h3>
-                    <p class="text-zinc-400">Імгненнае зняцце сродкаў на ваш рахунак без схаваных камісій.</p>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-card border border-brand-border mb-8">
+                    <i data-lucide="shield-check" class="w-4 h-4 text-brand-accent"></i>
+                    <span class="text-sm font-medium text-zinc-300">Geverifieerd 2026</span>
                 </div>
-                <div class="p-6">
-                    <div class="mx-auto w-16 h-16 bg-zinc-950 border border-zinc-800 rounded-2xl flex items-center justify-center mb-4 transform -rotate-3 hover:rotate-0 transition-transform">
-                        <i data-lucide="headset" class="w-8 h-8 text-brand-400"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-2">Падтрымка 24/7</h3>
-                    <p class="text-zinc-400">Наша каманда прафесіяналаў заўсёды гатовая дапамагчы вам у любы час.</p>
-                </div>
-                <div class="p-6">
-                    <div class="mx-auto w-16 h-16 bg-zinc-950 border border-zinc-800 rounded-2xl flex items-center justify-center mb-4 transform rotate-3 hover:rotate-0 transition-transform">
-                        <i data-lucide="shield" class="w-8 h-8 text-brand-400"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-2">Бяспечная гульня</h3>
-                    <p class="text-zinc-400">Вашы дадзеныя і транзакцыі абаронены найноўшымі тэхналогіямі шыфравання.</p>
+                
+                <h1 class="text-5xl md:text-7xl font-display font-bold text-white mb-6 uppercase tracking-tight">
+                    Welkom bij <span class="text-brand-accent brand-name-display text-glow">PlayOne</span>
+                </h1>
+                
+                <p class="text-xl md:text-2xl text-zinc-400 mb-10 max-w-3xl mx-auto">
+                    Claim jouw exclusieve <span class="text-white font-bold brand-bonus-display">Welkomstbonus</span> en ervaar het beste online casino van België.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#" class="brand-cta w-full sm:w-auto flex items-center justify-center gap-3 px-10 py-5 text-lg font-bold text-black bg-brand-accent hover:bg-brand-accentHover rounded-lg shadow-[0_0_30px_rgba(34,197,94,0.5)] transition-all transform hover:scale-105 uppercase tracking-wider">
+                        <i data-lucide="play-circle" class="w-6 h-6"></i>
+                        Nu Spelen
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Featured Games Showcase -->
-    <section class="py-20 bg-zinc-950 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-end mb-10">
-                <div>
-                    <h2 class="text-3xl md:text-4xl font-display font-bold text-white italic">ПАПУЛЯРНЫЯ ГУЛЬНІ</h2>
-                    <div class="w-20 h-1 bg-brand-500 mt-4 rounded-full"></div>
-                </div>
-                <a href="#" class="brand-cta hidden sm:flex items-center gap-2 text-brand-400 hover:text-brand-300 font-medium transition-colors">
-                    Усе гульні <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                </a>
-            </div>
-
-            <!-- Games Grid -->
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
-                <!-- Card 1 -->
-                <div class="relative aspect-[3/4] rounded-xl overflow-hidden group bg-zinc-900 border border-zinc-800 hover:border-brand-500 transition-colors">
-                    <img src="" alt="Game" class="auto-slot-img w-full h-full object-cover absolute inset-0 z-0">
-                    <div class="absolute top-3 left-3 bg-zinc-950/90 backdrop-blur border border-zinc-800 px-2.5 py-1 rounded text-xs font-bold text-brand-400 z-10 uppercase tracking-wider">Слоты</div>
-                    <div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-20">
-                        <a href="#" class="brand-cta bg-brand-500 text-black px-6 py-3 rounded-sm transform -skew-x-12 font-bold flex items-center gap-2 hover:bg-brand-400 scale-90 group-hover:scale-100 transition-all">
-                            <span class="block transform skew-x-12 flex items-center gap-2">
-                                <i data-lucide="play" class="w-4 h-4 fill-current"></i> Гуляць
-                            </span>
-                        </a>
+        <!-- Quick Benefits -->
+        <section class="border-y border-brand-border bg-brand-card/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 divide-y md:divide-y-0 md:divide-x divide-brand-border">
+                    <div class="flex items-center gap-4 md:px-8 pt-4 md:pt-0">
+                        <div class="w-12 h-12 rounded-full bg-brand-accent/10 flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="zap" class="w-6 h-6 text-brand-accent"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-white">Snelle Uitbetalingen</h3>
+                            <p class="text-sm text-zinc-400">Binnen 24 uur op je rekening</p>
+                        </div>
                     </div>
-                </div>
-                <!-- Card 2 -->
-                <div class="relative aspect-[3/4] rounded-xl overflow-hidden group bg-zinc-900 border border-zinc-800 hover:border-brand-500 transition-colors">
-                    <img src="" alt="Game" class="auto-slot-img w-full h-full object-cover absolute inset-0 z-0">
-                    <div class="absolute top-3 left-3 bg-zinc-950/90 backdrop-blur border border-zinc-800 px-2.5 py-1 rounded text-xs font-bold text-brand-400 z-10 uppercase tracking-wider">Джэкпот</div>
-                    <div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-20">
-                        <a href="#" class="brand-cta bg-brand-500 text-black px-6 py-3 rounded-sm transform -skew-x-12 font-bold flex items-center gap-2 hover:bg-brand-400 scale-90 group-hover:scale-100 transition-all">
-                            <span class="block transform skew-x-12 flex items-center gap-2">
-                                <i data-lucide="play" class="w-4 h-4 fill-current"></i> Гуляць
-                            </span>
-                        </a>
+                    <div class="flex items-center gap-4 md:px-8 pt-4 md:pt-0">
+                        <div class="w-12 h-12 rounded-full bg-brand-accent/10 flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="lock" class="w-6 h-6 text-brand-accent"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-white">100% Veilig Platform</h3>
+                            <p class="text-sm text-zinc-400">Gelicentieerd & Gereguleerd</p>
+                        </div>
                     </div>
-                </div>
-                <!-- Card 3 -->
-                <div class="relative aspect-[3/4] rounded-xl overflow-hidden group bg-zinc-900 border border-zinc-800 hover:border-brand-500 transition-colors">
-                    <img src="" alt="Game" class="auto-slot-img w-full h-full object-cover absolute inset-0 z-0">
-                    <div class="absolute top-3 left-3 bg-zinc-950/90 backdrop-blur border border-zinc-800 px-2.5 py-1 rounded text-xs font-bold text-brand-400 z-10 uppercase tracking-wider">Жывое казіно</div>
-                    <div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-20">
-                        <a href="#" class="brand-cta bg-brand-500 text-black px-6 py-3 rounded-sm transform -skew-x-12 font-bold flex items-center gap-2 hover:bg-brand-400 scale-90 group-hover:scale-100 transition-all">
-                            <span class="block transform skew-x-12 flex items-center gap-2">
-                                <i data-lucide="play" class="w-4 h-4 fill-current"></i> Гуляць
-                            </span>
-                        </a>
-                    </div>
-                </div>
-                <!-- Card 4 -->
-                <div class="relative aspect-[3/4] rounded-xl overflow-hidden group bg-zinc-900 border border-zinc-800 hover:border-brand-500 transition-colors">
-                    <img src="" alt="Game" class="auto-slot-img w-full h-full object-cover absolute inset-0 z-0">
-                    <div class="absolute top-3 left-3 bg-zinc-950/90 backdrop-blur border border-zinc-800 px-2.5 py-1 rounded text-xs font-bold text-brand-400 z-10 uppercase tracking-wider">Слоты</div>
-                    <div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-20">
-                        <a href="#" class="brand-cta bg-brand-500 text-black px-6 py-3 rounded-sm transform -skew-x-12 font-bold flex items-center gap-2 hover:bg-brand-400 scale-90 group-hover:scale-100 transition-all">
-                            <span class="block transform skew-x-12 flex items-center gap-2">
-                                <i data-lucide="play" class="w-4 h-4 fill-current"></i> Гуляць
-                            </span>
-                        </a>
-                    </div>
-                </div>
-                <!-- Card 5 -->
-                <div class="relative aspect-[3/4] rounded-xl overflow-hidden group bg-zinc-900 border border-zinc-800 hover:border-brand-500 transition-colors hidden md:block lg:block">
-                    <img src="" alt="Game" class="auto-slot-img w-full h-full object-cover absolute inset-0 z-0">
-                    <div class="absolute top-3 left-3 bg-zinc-950/90 backdrop-blur border border-zinc-800 px-2.5 py-1 rounded text-xs font-bold text-brand-400 z-10 uppercase tracking-wider">Настольныя</div>
-                    <div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-20">
-                        <a href="#" class="brand-cta bg-brand-500 text-black px-6 py-3 rounded-sm transform -skew-x-12 font-bold flex items-center gap-2 hover:bg-brand-400 scale-90 group-hover:scale-100 transition-all">
-                            <span class="block transform skew-x-12 flex items-center gap-2">
-                                <i data-lucide="play" class="w-4 h-4 fill-current"></i> Гуляць
-                            </span>
-                        </a>
+                    <div class="flex items-center gap-4 md:px-8 pt-4 md:pt-0">
+                        <div class="w-12 h-12 rounded-full bg-brand-accent/10 flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="headset" class="w-6 h-6 text-brand-accent"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-white">24/7 Klantenservice</h3>
+                            <p class="text-sm text-zinc-400">Altijd klaar om te helpen</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="mt-10 text-center sm:hidden">
-                <a href="#" class="brand-cta inline-flex items-center gap-2 text-brand-400 font-medium">
-                    Усе гульні <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                </a>
+        </section>
+
+        <!-- Featured Games Showcase -->
+        <section class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between mb-10">
+                    <h2 class="text-3xl font-display font-bold text-white uppercase tracking-wide flex items-center gap-3">
+                        <i data-lucide="sparkles" class="text-brand-accent"></i>
+                        Uitgelichte Spellen
+                    </h2>
+                    <a href="#" class="brand-cta text-sm font-semibold text-brand-accent hover:text-white transition-colors flex items-center gap-1">
+                        Bekijk Alles <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Games Grid -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                    
+                    <!-- Game Card 1 -->
+                    <div class="relative group rounded-xl overflow-hidden aspect-[3/4] bg-brand-card border border-brand-border box-glow transition-all duration-300">
+                        <img src="" alt="Game" class="auto-slot-img w-full h-full object-cover absolute inset-0 z-0">
+                        <div class="absolute top-2 left-2 bg-brand-dark/90 px-2 py-1 rounded text-[10px] font-bold text-brand-accent uppercase tracking-wider z-10 border border-brand-accent/30">
+                            Gokkasten
+                        </div>
+                        <div class="absolute inset-0 bg-brand-dark/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-20 backdrop-blur-sm">
+                            <a href="#" class="brand-cta bg-brand-accent text-black p-4 rounded-full transform scale-75 group-hover:scale-100 transition-transform duration-300 shadow-lg hover:bg-white">
+                                <i data-lucide="play" class="w-6 h-6 fill-black"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Game Card 2 -->
+                    <div class="relative group rounded-xl overflow-hidden aspect-[3/4] bg-brand-card border border-brand-border box-glow transition-all duration-300">
+                        <img src="" alt="Game" class="auto-slot-img w-full h-full object-cover absolute inset-0 z-0">
+                        <div class="absolute top-2 left-2 bg-brand-dark/90 px-2 py-1 rounded text-[10px] font-bold text-yellow-500 uppercase tracking-wider z-10 border border-yellow-500/30">
+                            Jackpot
+                        </div>
+                        <div class="absolute inset-0 bg-brand-dark/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-20 backdrop-blur-sm">
+                            <a href="#" class="brand-cta bg-brand-accent text-black p-4 rounded-full transform scale-75 group-hover:scale-100 transition-transform duration-300 shadow-lg hover:bg-white">
+                                <i data-lucide="play" class="w-6 h-6 fill-black"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Game Card 3 -->
+                    <div class="relative group rounded-xl overflow-hidden aspect-[3/4] bg-brand-card border border-brand-border box-glow transition-all duration-300">
+                        <img src="" alt="Game" class="auto-slot-img w-full h-full object-cover absolute inset-0 z-0">
+                        <div class="absolute top-2 left-2 bg-brand-dark/90 px-2 py-1 rounded text-[10px] font-bold text-purple-400 uppercase tracking-wider z-10 border border-purple-400/30">
+                            Live Casino
+                        </div>
+                        <div class="absolute inset-0 bg-brand-dark/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-20 backdrop-blur-sm">
+                            <a href="#" class="brand-cta bg-brand-accent text-black p-4 rounded-full transform scale-75 group-hover:scale-100 transition-transform duration-300 shadow-lg hover:bg-white">
+                                <i data-lucide="play" class="w-6 h-6 fill-black"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Game Card 4 -->
+                    <div class="relative group rounded-xl overflow-hidden aspect-[3/4] bg-brand-card border border-brand-border box-glow transition-all duration-300">
+                        <img src="" alt="Game" class="auto-slot-img w-full h-full object-cover absolute inset-0 z-0">
+                        <div class="absolute top-2 left-2 bg-brand-dark/90 px-2 py-1 rounded text-[10px] font-bold text-brand-accent uppercase tracking-wider z-10 border border-brand-accent/30">
+                            Gokkasten
+                        </div>
+                        <div class="absolute inset-0 bg-brand-dark/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-20 backdrop-blur-sm">
+                            <a href="#" class="brand-cta bg-brand-accent text-black p-4 rounded-full transform scale-75 group-hover:scale-100 transition-transform duration-300 shadow-lg hover:bg-white">
+                                <i data-lucide="play" class="w-6 h-6 fill-black"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Game Card 5 (Hidden on small screens to maintain row balance) -->
+                    <div class="hidden md:block relative group rounded-xl overflow-hidden aspect-[3/4] bg-brand-card border border-brand-border box-glow transition-all duration-300">
+                        <img src="" alt="Game" class="auto-slot-img w-full h-full object-cover absolute inset-0 z-0">
+                        <div class="absolute top-2 left-2 bg-brand-dark/90 px-2 py-1 rounded text-[10px] font-bold text-blue-400 uppercase tracking-wider z-10 border border-blue-400/30">
+                            Tafelspellen
+                        </div>
+                        <div class="absolute inset-0 bg-brand-dark/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-20 backdrop-blur-sm">
+                            <a href="#" class="brand-cta bg-brand-accent text-black p-4 rounded-full transform scale-75 group-hover:scale-100 transition-transform duration-300 shadow-lg hover:bg-white">
+                                <i data-lucide="play" class="w-6 h-6 fill-black"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Game Card 6 (Hidden on small screens) -->
+                    <div class="hidden lg:block relative group rounded-xl overflow-hidden aspect-[3/4] bg-brand-card border border-brand-border box-glow transition-all duration-300">
+                        <img src="" alt="Game" class="auto-slot-img w-full h-full object-cover absolute inset-0 z-0">
+                        <div class="absolute top-2 left-2 bg-brand-dark/90 px-2 py-1 rounded text-[10px] font-bold text-yellow-500 uppercase tracking-wider z-10 border border-yellow-500/30">
+                            Jackpot
+                        </div>
+                        <div class="absolute inset-0 bg-brand-dark/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-20 backdrop-blur-sm">
+                            <a href="#" class="brand-cta bg-brand-accent text-black p-4 rounded-full transform scale-75 group-hover:scale-100 transition-transform duration-300 shadow-lg hover:bg-white">
+                                <i data-lucide="play" class="w-6 h-6 fill-black"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <div class="mt-10 flex justify-center">
+                    <a href="#" class="brand-cta px-8 py-3 bg-brand-card border border-brand-border hover:border-brand-accent text-white font-semibold rounded-md transition-all">
+                        Laad Meer Spellen
+                    </a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Brand Hub Links (Navigation Grid) -->
-    <section class="py-20 bg-zinc-900 border-t border-zinc-800">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-display font-bold text-center text-white italic mb-12">ІНФАРМАЦЫЯ АБ БРЭНДЗЕ</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Card 1 -->
-                <a href="faq.html" class="group block relative overflow-hidden rounded-2xl bg-zinc-950 border border-zinc-800 p-8 hover:border-brand-500 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(34,197,94,0.1)]">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-brand-500/5 rounded-bl-full -z-10 group-hover:bg-brand-500/10 transition-colors"></div>
-                    <i data-lucide="help-circle" class="w-12 h-12 text-brand-500 mb-6 group-hover:scale-110 transition-transform duration-300"></i>
-                    <h3 class="text-2xl font-bold text-white mb-2">Частыя пытанні</h3>
-                    <p class="text-zinc-400 text-sm group-hover:text-zinc-300 transition-colors">Адказы на самыя папулярныя пытанні гульцоў.</p>
-                    <div class="mt-6 flex items-center text-brand-400 text-sm font-bold">
-                        Чытаць далей <i data-lucide="chevron-right" class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"></i>
-                    </div>
-                </a>
+        <!-- Brand Hub Links (Quick Navigation) -->
+        <section class="py-16 bg-brand-card/30">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    
+                    <!-- FAQ Card -->
+                    <a href="faq.html" class="group relative overflow-hidden rounded-2xl bg-brand-card border border-brand-border p-8 transition-all duration-300 hover:-translate-y-2 hover:border-brand-accent hover:shadow-[0_10px_30px_rgba(34,197,94,0.1)]">
+                        <div class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
+                            <i data-lucide="help-circle" class="w-32 h-32 text-brand-accent"></i>
+                        </div>
+                        <div class="relative z-10">
+                            <div class="w-14 h-14 rounded-xl bg-brand-dark border border-brand-border flex items-center justify-center mb-6 group-hover:bg-brand-accent/10 transition-colors">
+                                <i data-lucide="help-circle" class="w-7 h-7 text-brand-accent"></i>
+                            </div>
+                            <h3 class="text-2xl font-display font-bold text-white mb-2 uppercase tracking-wide">FAQ</h3>
+                            <p class="text-zinc-400">Vind snel antwoorden op al je vragen over registratie, betalingen en meer.</p>
+                            <div class="mt-6 flex items-center text-brand-accent font-semibold text-sm">
+                                Ontdek Meer <i data-lucide="arrow-right" class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"></i>
+                            </div>
+                        </div>
+                    </a>
 
-                <!-- Card 2 -->
-                <a href="promotions.html" class="group block relative overflow-hidden rounded-2xl bg-zinc-950 border border-zinc-800 p-8 hover:border-brand-500 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(34,197,94,0.1)]">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-brand-500/5 rounded-bl-full -z-10 group-hover:bg-brand-500/10 transition-colors"></div>
-                    <i data-lucide="gift" class="w-12 h-12 text-brand-500 mb-6 group-hover:scale-110 transition-transform duration-300"></i>
-                    <h3 class="text-2xl font-bold text-white mb-2">Акцыі</h3>
-                    <p class="text-zinc-400 text-sm group-hover:text-zinc-300 transition-colors">Бягучыя бонусы, турніры і спецыяльныя прапановы.</p>
-                    <div class="mt-6 flex items-center text-brand-400 text-sm font-bold">
-                        Глядзець усе <i data-lucide="chevron-right" class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"></i>
-                    </div>
-                </a>
+                    <!-- Promotions Card -->
+                    <a href="promotions.html" class="group relative overflow-hidden rounded-2xl bg-brand-card border border-brand-border p-8 transition-all duration-300 hover:-translate-y-2 hover:border-brand-accent hover:shadow-[0_10px_30px_rgba(34,197,94,0.1)]">
+                        <div class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
+                            <i data-lucide="gift" class="w-32 h-32 text-brand-accent"></i>
+                        </div>
+                        <div class="relative z-10">
+                            <div class="w-14 h-14 rounded-xl bg-brand-dark border border-brand-border flex items-center justify-center mb-6 group-hover:bg-brand-accent/10 transition-colors">
+                                <i data-lucide="gift" class="w-7 h-7 text-brand-accent"></i>
+                            </div>
+                            <h3 class="text-2xl font-display font-bold text-white mb-2 uppercase tracking-wide">Promoties</h3>
+                            <p class="text-zinc-400">Bekijk onze nieuwste bonussen, toernooien en exclusieve aanbiedingen.</p>
+                            <div class="mt-6 flex items-center text-brand-accent font-semibold text-sm">
+                                Bekijk Aanbiedingen <i data-lucide="arrow-right" class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"></i>
+                            </div>
+                        </div>
+                    </a>
 
-                <!-- Card 3 -->
-                <a href="reviews.html" class="group block relative overflow-hidden rounded-2xl bg-zinc-950 border border-zinc-800 p-8 hover:border-brand-500 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(34,197,94,0.1)]">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-brand-500/5 rounded-bl-full -z-10 group-hover:bg-brand-500/10 transition-colors"></div>
-                    <i data-lucide="star" class="w-12 h-12 text-brand-500 mb-6 group-hover:scale-110 transition-transform duration-300"></i>
-                    <h3 class="text-2xl font-bold text-white mb-2">Водгукі</h3>
-                    <p class="text-zinc-400 text-sm group-hover:text-zinc-300 transition-colors">Даведайцеся, што кажуць іншыя гульцы пра нас.</p>
-                    <div class="mt-6 flex items-center text-brand-400 text-sm font-bold">
-                        Чытаць водгукі <i data-lucide="chevron-right" class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"></i>
-                    </div>
-                </a>
+                    <!-- Reviews Card -->
+                    <a href="reviews.html" class="group relative overflow-hidden rounded-2xl bg-brand-card border border-brand-border p-8 transition-all duration-300 hover:-translate-y-2 hover:border-brand-accent hover:shadow-[0_10px_30px_rgba(34,197,94,0.1)]">
+                        <div class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
+                            <i data-lucide="star" class="w-32 h-32 text-brand-accent"></i>
+                        </div>
+                        <div class="relative z-10">
+                            <div class="w-14 h-14 rounded-xl bg-brand-dark border border-brand-border flex items-center justify-center mb-6 group-hover:bg-brand-accent/10 transition-colors">
+                                <i data-lucide="star" class="w-7 h-7 text-brand-accent"></i>
+                            </div>
+                            <h3 class="text-2xl font-display font-bold text-white mb-2 uppercase tracking-wide">Beoordelingen</h3>
+                            <p class="text-zinc-400">Lees wat andere spelers vinden van hun ervaring op ons platform.</p>
+                            <div class="mt-6 flex items-center text-brand-accent font-semibold text-sm">
+                                Lees Reviews <i data-lucide="arrow-right" class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"></i>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- SEO Article Section -->
-    <section class="py-16 bg-zinc-950 border-t border-zinc-900">
-        <div class="container mx-auto px-4 max-w-4xl">
-            <article class="prose prose-invert prose-green max-w-none prose-headings:font-display prose-headings:italic prose-a:text-brand-400 hover:prose-a:text-brand-300">
+        <!-- SEO Article Section -->
+        <section class="py-16 bg-brand-dark">
+            <div class="container max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-invert prose-green">
                 
 <style>
   .n8n-article-content h2 { font-weight: 700 !important; margin: 2.5rem 0 1rem 0 !important; }
@@ -349,235 +350,226 @@
   .n8n-article-content a { color: #3b82f6 !important; text-decoration: underline !important; font-weight: 600 !important; }
 </style>
 <div class="n8n-article-content">
-  <h2>Frequently Asked Questions About PlayOne Casino</h2>
+  <h2>Veelgestelde Vragen over PlayOne</h2>
 
-<p>Welcome to our comprehensive FAQ section where we address the most common questions about playing at PlayOne. Whether you're curious about account verification, payment methods, or safety measures, you'll find detailed answers below to help enhance your gaming experience.</p>
+<p>Welkom bij de veelgestelde vragen pagina van PlayOne. Hier vind je antwoorden op de meest gestelde vragen over je account, betalingen, veiligheid en eerlijkheid. We begrijpen dat je vragen hebt voordat je begint met spelen, en daarom hebben we deze uitgebreide FAQ-pagina samengesteld.</p>
 
-<h2>Account Verification (KYC) Questions</h2>
+<h2>Accountverificatie (KYC) bij PlayOne</h2>
 
-<h3>What is KYC verification and why is it required?</h3>
+<h3>Waarom moet ik mijn account laten verifiëren?</h3>
 
-<p>KYC (Know Your Customer) verification is a standard security procedure required by gaming regulations in Belgium. At PlayOne, we implement KYC to protect your account from fraud, prevent identity theft, and ensure compliance with Belgian gaming laws. This process confirms that you are of legal gambling age and helps maintain a safe gaming environment for all players.</p>
+<p>PlayOne neemt de veiligheid van alle spelers zeer serieus. Accountverificatie, ook wel KYC (Know Your Customer) genoemd, is een wettelijke verplichting die helpt om identiteitsfraude, witwassen en minderjarig gokken te voorkomen. Dit proces beschermt niet alleen jouw account, maar zorgt er ook voor dat PlayOne voldoet aan alle Nederlandse kansspelwetgeving.</p>
 
-<h3>What documents do I need for account verification at PlayOne?</h3>
+<h3>Welke documenten heb ik nodig voor verificatie?</h3>
 
-<p>To complete your verification at PlayOne, you'll typically need to provide:</p>
+<p>Voor een succesvolle verificatie bij PlayOne heb je de volgende documenten nodig:</p>
 
 <ul>
-<li>A valid government-issued photo ID (passport, Belgian identity card, or driver's license)</li>
-<li>Proof of address dated within the last three months (utility bill, bank statement, or official government correspondence)</li>
-<li>Copy of the payment method used for deposits (credit/debit card or bank account statement)</li>
+<li>Een geldig identiteitsbewijs (paspoort, rijbewijs of ID-kaart)</li>
+<li>Een recent adresbewijs (bijvoorbeeld een bankafschrift of nutsbedrijfrekening van de afgelopen drie maanden)</li>
+<li>Mogelijk een betalingsbewijs van de gebruikte betaalmethode</li>
 </ul>
 
-<h3>How long does the verification process take?</h3>
+<h3>Hoe lang duurt het verificatieproces?</h3>
 
-<p>PlayOne strives to complete account verification within 24-48 hours of receiving all required documents. During peak periods, this may extend to 72 hours. You can speed up the process by ensuring all documents are clear, valid, and meet our requirements. Our support team will notify you immediately once your account is verified.</p>
+<p>Het verificatieproces bij PlayOne wordt gewoonlijk binnen 24 tot 48 uur afgehandeld. In sommige gevallen kan het tot 72 uur duren, afhankelijk van de volledigheid van de ingediende documenten. Je ontvangt een bevestiging per e-mail zodra je account volledig is geverifieerd.</p>
 
-<h2>Withdrawal Times and Procedures</h2>
+<h2>Opnametijden en Uitbetalingen</h2>
 
-<h3>How long do withdrawals take at PlayOne?</h3>
+<h3>Hoe snel kan ik mijn winsten opnemen?</h3>
 
-<p>Withdrawal times at PlayOne vary depending on your chosen payment method:</p>
+<p>De opnametijden bij PlayOne variëren afhankelijk van de gekozen betaalmethode. Over het algemeen hanteren we de volgende verwerkingstijden:</p>
 
 <ul>
-<li>E-wallets (Skrill, Neteller): 0-24 hours</li>
-<li>Credit/Debit Cards: 3-5 business days</li>
-<li>Bank Transfers: 3-7 business days</li>
-<li>Cryptocurrency: 0-24 hours</li>
+<li>E-wallets (zoals Skrill en Neteller): 0-24 uur</li>
+<li>Bankoverschrijving: 1-3 werkdagen</li>
+<li>Creditcards en debetkaarten: 3-5 werkdagen</li>
 </ul>
 
-<p>Please note that first-time withdrawals may take longer due to additional security checks and account verification requirements. Once your account is fully verified, subsequent withdrawals are typically processed much faster.</p>
+<p>Houd er rekening mee dat je account volledig geverifieerd moet zijn voordat PlayOne je eerste opname kan verwerken. Dit is een eenmalige controle die toekomstige opnames aanzienlijk versnelt.</p>
 
-<h3>Is there a minimum or maximum withdrawal amount?</h3>
+<h3>Is er een minimum of maximum opnamebedrag?</h3>
 
-<p>At PlayOne, the minimum withdrawal amount is €20, while maximum withdrawal limits depend on your account status and chosen payment method. VIP members enjoy higher withdrawal limits. Standard players can withdraw up to €5,000 per transaction, with monthly limits clearly outlined in your account settings.</p>
+<p>Bij PlayOne is het minimum opnamebedrag €10. Het maximum opnamebedrag per transactie bedraagt €5.000, tenzij anders overeengekomen met onze klantenservice. VIP-leden kunnen profiteren van hogere opnamelimieten.</p>
 
-<h3>Why was my withdrawal delayed?</h3>
+<h3>Zijn er kosten verbonden aan opnames?</h3>
 
-<p>Several factors may cause withdrawal delays at PlayOne:</p>
+<p>PlayOne rekent geen kosten voor opnames. Echter, sommige betalingsproviders kunnen eigen transactiekosten hanteren. We raden aan om de voorwaarden van je gekozen betaalmethode te controleren.</p>
 
-<ul>
-<li>Incomplete KYC verification</li>
-<li>First-time withdrawal requiring additional security checks</li>
-<li>Bonus wagering requirements not yet met</li>
-<li>Payment provider processing times</li>
-<li>Requests made during weekends or holidays</li>
-</ul>
+<h2>Stortingsmethoden</h2>
 
-<p>If your withdrawal is delayed beyond the estimated timeframe, our customer support team is available to investigate and provide updates on your transaction status.</p>
+<h3>Welke stortingsmethoden accepteert PlayOne?</h3>
 
-<h2>Deposit Methods and Payment Options</h2>
-
-<h3>What deposit methods are available at PlayOne?</h3>
-
-<p>PlayOne offers Belgian players a wide range of secure deposit methods:</p>
+<p>PlayOne biedt een breed scala aan veilige en betrouwbare stortingsmethoden om het spelers gemakkelijk te maken. De beschikbare opties zijn:</p>
 
 <ul>
-<li>Credit and Debit Cards (Visa, Mastercard)</li>
+<li>Creditcards en debetkaarten (Visa, Mastercard)</li>
 <li>E-wallets (Skrill, Neteller, PayPal)</li>
-<li>Bank Transfers</li>
-<li>Prepaid Cards (Paysafecard)</li>
-<li>Cryptocurrency (Bitcoin, Ethereum)</li>
-<li>Mobile Payment Options</li>
+<li>Bankoverschrijving (iDEAL voor Nederlandse spelers)</li>
+<li>Prepaid kaarten (Paysafecard)</li>
+<li>Mobiele betalingsmethoden</li>
 </ul>
 
-<h3>Are there any deposit fees?</h3>
+<h3>Wat is het minimum stortingsbedrag?</h3>
 
-<p>PlayOne does not charge any fees for deposits. However, your payment provider or bank may apply their own transaction fees. We recommend checking with your payment provider for their specific fee structure. All deposits are processed instantly, allowing you to start playing immediately.</p>
+<p>Het minimum stortingsbedrag bij PlayOne is €10 voor de meeste betaalmethoden. Dit lage drempelbedrag maakt het voor iedereen toegankelijk om te beginnen met spelen.</p>
 
-<h3>What is the minimum deposit amount?</h3>
+<h3>Zijn mijn stortingen direct beschikbaar?</h3>
 
-<p>The minimum deposit at PlayOne is €10 for most payment methods, making it accessible for players with varying budgets. This allows you to explore our games and experience the platform without a significant financial commitment.</p>
+<p>Ja, alle stortingen bij PlayOne worden onmiddellijk verwerkt en zijn direct beschikbaar op je speelaccount. Je kunt meteen beginnen met spelen na een succesvolle storting.</p>
 
-<h2>Safety and Security Measures</h2>
+<h2>Veiligheid en Beveiliging</h2>
 
-<h3>Is PlayOne a safe and licensed casino?</h3>
+<h3>Hoe veilig is PlayOne?</h3>
 
-<p>Yes, PlayOne operates under a valid Belgian gaming license and adheres to strict regulatory standards set by the Belgian Gaming Commission. We implement industry-leading security measures including SSL encryption technology to protect all financial transactions and personal data. Our platform undergoes regular security audits to ensure player protection remains our top priority.</p>
+<p>Veiligheid staat bij PlayOne voorop. We gebruiken de nieuwste SSL-encryptietechnologie om ervoor te zorgen dat al je persoonlijke en financiële gegevens volledig beschermd zijn. Daarnaast wordt PlayOne gereguleerd door de Kansspelautoriteit (KSA) en beschikken we over een geldige Nederlandse vergunning.</p>
 
-<h3>How does PlayOne protect my personal information?</h3>
+<h3>Hoe beschermt PlayOne mijn persoonlijke gegevens?</h3>
 
-<p>PlayOne employs advanced 128-bit SSL encryption technology to safeguard all data transmitted between your device and our servers. We maintain strict data protection policies compliant with GDPR regulations, ensuring your personal and financial information is never shared with unauthorized third parties. Our servers are protected by state-of-the-art firewalls and monitored 24/7 for suspicious activity.</p>
+<p>PlayOne houdt zich aan de AVG (Algemene Verordening Gegevensbescherming) en heeft strikte protocollen voor gegevensbescherming. Je persoonlijke informatie wordt nooit gedeeld met derden zonder jouw uitdrukkelijke toestemming, behalve wanneer dit wettelijk verplicht is.</p>
 
-<h3>What responsible gambling tools does PlayOne offer?</h3>
+<h3>Kan ik limieten instellen op mijn account?</h3>
 
-<p>PlayOne is committed to promoting responsible gambling. We provide various tools to help you maintain control:</p>
+<p>Absoluut. PlayOne ondersteunt verantwoord gokken en biedt verschillende tools waarmee je controle houdt over je spelgedrag, waaronder:</p>
 
 <ul>
-<li>Deposit limits (daily, weekly, monthly)</li>
-<li>Session time reminders</li>
-<li>Self-exclusion options</li>
-<li>Reality checks</li>
-<li>Links to professional gambling support organizations</li>
+<li>Stortingslimieten (dagelijks, wekelijks, maandelijks)</li>
+<li>Verlieslimieten</li>
+<li>Sessielimieten</li>
+<li>Zelfuitsluiting opties</li>
 </ul>
 
-<h2>Game Fairness and RNG</h2>
+<h2>Eerlijkheid en Spellen</h2>
 
-<h3>How does PlayOne ensure fair gaming?</h3>
+<h3>Zijn de spellen bij PlayOne eerlijk?</h3>
 
-<p>All games at PlayOne use certified Random Number Generator (RNG) technology, which is regularly tested by independent auditing firms like eCOGRA and iTech Labs. These audits verify that game outcomes are completely random and cannot be manipulated by either the casino or players. We publish audit certificates to demonstrate our commitment to fair play.</p>
+<p>Ja, alle spellen bij PlayOne zijn volledig eerlijk en transparant. We werken uitsluitend samen met gecertificeerde spellenleveranciers wier spellen regelmatig worden getest door onafhankelijke organisaties. Alle slots en casinospellen gebruiken een Random Number Generator (RNG) die zorgt voor volledig willekeurige en onvoorspelbare uitkomsten.</p>
 
-<h3>Can I verify game fairness myself?</h3>
+<h3>Kan ik de eerlijkheid van spellen controleren?</h3>
 
-<p>Yes, PlayOne provides access to game history and round details in your account section. Many of our games also feature provably fair technology, allowing you to verify the randomness of each result. Additionally, Return to Player (RTP) percentages for all games are publicly displayed, ensuring complete transparency.</p>
+<p>De RNG-systemen van onze spellen worden regelmatig geauditeerd door onafhankelijke testbureaus zoals eCOGRA en iTech Labs. De certificaten en testrapporten zijn beschikbaar op onze website. PlayOne publiceert ook maandelijkse uitbetalingspercentages voor volledige transparantie.</p>
 
-<h2>Contact and Support</h2>
+<h3>Heeft PlayOne een klantenservice?</h3>
 
-<p>If you have additional questions not covered in this FAQ, the PlayOne support team is available 24/7 via live chat, email, or phone. We're here to ensure your gaming experience is smooth, secure, and enjoyable.</p>
+<p>Ja, de klantenservice van PlayOne is dagelijks bereikbaar via live chat, e-mail en telefoon. Ons professionele supportteam staat klaar om al je vragen te beantwoorden en eventuele problemen snel op te lossen.</p>
+
+<p>Heb je nog andere vragen? Neem gerust contact op met ons vriendelijke supportteam. Bij PlayOne staat jouw spelervaring centraal!</p>
 </div>
 
-            </article>
-        </div>
-    </section>
-
-    <!-- Payment Methods Banner (Text/Icons Only) -->
-    <section class="py-10 bg-zinc-900 border-t border-zinc-800">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <p class="text-sm text-zinc-500 mb-6 uppercase tracking-widest font-bold">Спосабы аплаты</p>
-            <div class="flex flex-wrap justify-center items-center gap-6 md:gap-12 text-zinc-400 font-display font-bold italic tracking-wider text-xl md:text-2xl opacity-70">
-                <span class="hover:text-white transition-colors">VISA</span>
-                <span class="hover:text-white transition-colors">MASTERCARD</span>
-                <span class="hover:text-white transition-colors">SKRILL</span>
-                <span class="hover:text-white transition-colors">NETELLER</span>
-                <span class="hover:text-white transition-colors flex items-center gap-2"><i data-lucide="bitcoin" class="w-6 h-6"></i> CRYPTO</span>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Payment Methods Banner (Text/Icons Only) -->
+        <section class="py-10 border-t border-brand-border bg-brand-card/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h4 class="text-center text-sm font-semibold text-zinc-500 uppercase tracking-widest mb-6">Geaccepteerde Betaalmethoden</h4>
+                <div class="flex flex-wrap justify-center items-center gap-8 text-zinc-400">
+                    <div class="flex items-center gap-2 font-display font-bold text-xl"><i data-lucide="credit-card" class="w-6 h-6"></i> VISA</div>
+                    <div class="flex items-center gap-2 font-display font-bold text-xl"><i data-lucide="credit-card" class="w-6 h-6"></i> MASTERCARD</div>
+                    <div class="flex items-center gap-2 font-display font-bold text-xl"><i data-lucide="smartphone" class="w-6 h-6"></i> APPLE PAY</div>
+                    <div class="flex items-center gap-2 font-display font-bold text-xl"><i data-lucide="wallet" class="w-6 h-6"></i> SKRILL</div>
+                    <div class="flex items-center gap-2 font-display font-bold text-xl"><i data-lucide="banknote" class="w-6 h-6"></i> PAYSAFECARD</div>
+                    <div class="flex items-center gap-2 font-display font-bold text-xl"><i data-lucide="building" class="w-6 h-6"></i> BANK TRANSFER</div>
+                </div>
+            </div>
+        </section>
+
+    </main>
 
     <!-- Footer -->
-    <footer class="bg-zinc-950 pt-16 pb-8 border-t border-zinc-900">
+    <footer class="bg-brand-dark border-t border-brand-border pt-16 pb-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-12">
-                <!-- Brand Info -->
-                <div class="md:col-span-6 lg:col-span-5">
-                    <div class="flex items-center gap-2 mb-6">
-                        <div class="w-8 h-8 bg-brand-500 rounded-sm transform -skew-x-12 flex items-center justify-center">
-                            <i data-lucide="zap" class="w-5 h-5 text-black"></i>
-                        </div>
-                        <span class="font-display font-bold text-2xl tracking-wider text-white italic brand-name-inject">PLAYONE</span>
-                    </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                
+                <!-- Brand & Description -->
+                <div class="md:col-span-2">
+                    <a href="index.html" class="flex items-center gap-2 mb-6">
+                        <i data-lucide="gamepad-2" class="w-8 h-8 text-brand-accent"></i>
+                        <span class="brand-name-display font-display font-bold italic text-3xl text-white tracking-wider uppercase">PlayOne</span>
+                    </a>
                     <p class="text-zinc-400 text-sm leading-relaxed mb-6">
-                        Незалежны партаўнальны сайт.
+                        Onafhankelijke vergelijkingssite.
                     </p>
                     <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-500">
-                            <span class="font-bold text-lg">18+</span>
+                        <div class="w-10 h-10 rounded-full bg-brand-card border border-brand-border flex items-center justify-center">
+                            <i data-lucide="shield-alert" class="w-5 h-5 text-zinc-300"></i>
                         </div>
-                        <i data-lucide="shield-alert" class="w-8 h-8 text-zinc-600"></i>
+                        <span class="text-xl font-bold text-zinc-300">18+</span>
                     </div>
                 </div>
 
                 <!-- Quick Links -->
-                <div class="md:col-span-6 lg:col-span-3 lg:col-start-9">
-                    <h4 class="text-white font-bold mb-6 uppercase tracking-wider text-sm">Хуткія спасылкі</h4>
-                    <ul class="space-y-4">
-                        <li><a href="index.html" class="text-zinc-400 hover:text-brand-400 transition-colors text-sm flex items-center gap-2"><i data-lucide="chevron-right" class="w-3 h-3"></i> Галоўная</a></li>
-                        <li><a href="promotions.html" class="text-zinc-400 hover:text-brand-400 transition-colors text-sm flex items-center gap-2"><i data-lucide="chevron-right" class="w-3 h-3"></i> Акцыі</a></li>
-                        <li><a href="reviews.html" class="text-zinc-400 hover:text-brand-400 transition-colors text-sm flex items-center gap-2"><i data-lucide="chevron-right" class="w-3 h-3"></i> Водгукі</a></li>
-                        <li><a href="faq.html" class="text-zinc-400 hover:text-brand-400 transition-colors text-sm flex items-center gap-2"><i data-lucide="chevron-right" class="w-3 h-3"></i> Частыя пытанні</a></li>
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-wider mb-6">Snelle Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-zinc-400 hover:text-brand-accent transition-colors text-sm">Home</a></li>
+                        <li><a href="promotions.html" class="text-zinc-400 hover:text-brand-accent transition-colors text-sm">Promoties</a></li>
+                        <li><a href="reviews.html" class="text-zinc-400 hover:text-brand-accent transition-colors text-sm">Beoordelingen</a></li>
+                        <li><a href="faq.html" class="text-zinc-400 hover:text-brand-accent transition-colors text-sm">FAQ</a></li>
                     </ul>
                 </div>
+
+                <!-- Legal Links -->
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-wider mb-6">Juridisch</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-zinc-400 hover:text-white transition-colors text-sm">Algemene Voorwaarden</a></li>
+                        <li><a href="#" class="text-zinc-400 hover:text-white transition-colors text-sm">Privacybeleid</a></li>
+                        <li><a href="#" class="text-zinc-400 hover:text-white transition-colors text-sm">Cookiebeleid</a></li>
+                        <li><a href="#" class="text-zinc-400 hover:text-white transition-colors text-sm">Verantwoord Spelen</a></li>
+                    </ul>
+                </div>
+
             </div>
 
-            <div class="border-t border-zinc-900 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-zinc-600 text-xs text-center md:text-left max-w-3xl">
-                    Азартныя гульні могуць выклікаць залежнасць. Калі ласка, гуляйце адказна. 18+
+            <!-- Compliance Text -->
+            <div class="border-t border-brand-border pt-8 text-center">
+                <p class="text-xs text-zinc-500 max-w-4xl mx-auto leading-relaxed mb-4">
+                    Gokken kan verslavend zijn. Speel verantwoord. 18+
                 </p>
-                <p class="text-zinc-500 text-sm whitespace-nowrap">
-                    &copy; 2026 <span class="brand-name-inject">PlayOne</span>. All rights reserved.
+                <p class="text-xs text-zinc-600">
+                    &copy; 2026 <span class="brand-name-display">PlayOne</span>. Alle rechten voorbehouden.
                 </p>
             </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
+    <!-- Dynamic Data & Initialization -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Initialize Lucide Icons
             lucide.createIcons();
 
-            // Dynamic Brand Data Injection
+            // Inject Dynamic Brand Data
             try {
-                const casinos = [{"rank":1,"name":"PlayOne","rating":4.8,"bonus":"100% да 500€ + 200 Free Spins","highlights":["Больш за 3000 гульняў","Падтрымка крыптавалют","Жывыя дылеры 24/7"],"pros":["Хуткі вывад сродкаў","Шчодрыя бонусы","Міжнародная ліцэнзія","Якаснае мабільнае рашэнне"],"cons":["Абмежаваная падтрымка беларускай мовы","Высокія патрабаванні па вэйджару"],"payments":"Visa, Mastercard, Bitcoin, Ethereum, Skrill, Neteller","link":"https://track-cr.com/rU8nw?sub_id_14=000007223&sub_id_9=playone-be.com","url":"https://track-cr.com/rU8nw?sub_id_14=000007223&sub_id_9=playone-be.com","logo":null}];
-                if (casinos && Array.isArray(casinos) && casinos.length > 0) {
+                const casinos = [{"rank":1,"name":"PlayOne","rating":4.6,"bonus":"100% tot €500 + 200 Gratis Spins","highlights":["Over 3000 casinospellen","Live casino met Evolution Gaming","Crypto betalingen geaccepteerd"],"pros":["Grote variatie aan slots en tafelspellen","Snelle uitbetalingen binnen 24 uur","Uitstekende mobiele ervaring","24/7 live chat support"],"cons":["Inzetvereisten 40x op bonussen","KYC-verificatie verplicht voor opnames"],"payments":"Visa, Mastercard, Skrill, Neteller, Bitcoin, Ethereum","link":"https://track-cr.com/rU8nw?sub_id_14=000007223&sub_id_9=playone-be.com","url":"https://track-cr.com/rU8nw?sub_id_14=000007223&sub_id_9=playone-be.com","logo":null}];
+                if (casinos && casinos.length > 0) {
                     const brand = casinos[0];
                     
                     // Inject Brand Name
                     if (brand.name) {
-                        document.querySelectorAll('.brand-name-inject').forEach(el => {
+                        document.querySelectorAll('.brand-name-display').forEach(el => {
                             el.textContent = brand.name;
                         });
                     }
 
-                    // Inject Bonus
+                    // Inject Brand Bonus
                     if (brand.bonus) {
-                        document.querySelectorAll('.brand-bonus-inject').forEach(el => {
+                        document.querySelectorAll('.brand-bonus-display').forEach(el => {
                             el.textContent = brand.bonus;
                         });
                     }
                 }
             } catch (error) {
-                console.error('Error parsing casino data:', error);
+                console.error("Error parsing casino data:", error);
             }
-
-            // Sticky Header Background on Scroll
-            const header = document.querySelector('header');
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 50) {
-                    header.classList.add('shadow-lg', 'bg-zinc-950/95');
-                    header.classList.remove('bg-zinc-950/80');
-                } else {
-                    header.classList.remove('shadow-lg', 'bg-zinc-950/95');
-                    header.classList.add('bg-zinc-950/80');
-                }
-            });
         });
     </script>
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     try {
-      const casinosData = [{"rank":1,"name":"PlayOne","rating":4.8,"bonus":"100% да 500€ + 200 Free Spins","highlights":["Больш за 3000 гульняў","Падтрымка крыптавалют","Жывыя дылеры 24/7"],"pros":["Хуткі вывад сродкаў","Шчодрыя бонусы","Міжнародная ліцэнзія","Якаснае мабільнае рашэнне"],"cons":["Абмежаваная падтрымка беларускай мовы","Высокія патрабаванні па вэйджару"],"payments":"Visa, Mastercard, Bitcoin, Ethereum, Skrill, Neteller","link":"https://track-cr.com/rU8nw?sub_id_14=000007223&sub_id_9=playone-be.com","url":"https://track-cr.com/rU8nw?sub_id_14=000007223&sub_id_9=playone-be.com","logo":null}];
+      const casinosData = [{"rank":1,"name":"PlayOne","rating":4.6,"bonus":"100% tot €500 + 200 Gratis Spins","highlights":["Over 3000 casinospellen","Live casino met Evolution Gaming","Crypto betalingen geaccepteerd"],"pros":["Grote variatie aan slots en tafelspellen","Snelle uitbetalingen binnen 24 uur","Uitstekende mobiele ervaring","24/7 live chat support"],"cons":["Inzetvereisten 40x op bonussen","KYC-verificatie verplicht voor opnames"],"payments":"Visa, Mastercard, Skrill, Neteller, Bitcoin, Ethereum","link":"https://track-cr.com/rU8nw?sub_id_14=000007223&sub_id_9=playone-be.com","url":"https://track-cr.com/rU8nw?sub_id_14=000007223&sub_id_9=playone-be.com","logo":null}];
       if (casinosData && casinosData.length > 0) {
         const targetLink = casinosData[0].url || '#';
         if (targetLink !== '#') {
@@ -591,7 +583,7 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    const slotImagesPool = ["https://cdn.jsdelivr.net/gh/aiguruitmaster/casino-images/sweet-bonanza-1.png","https://cdn.jsdelivr.net/gh/aiguruitmaster/casino-images/e7fb81e6-a23d-4fbf-a147-9f1f718eb555.jpg","https://cdn.jsdelivr.net/gh/aiguruitmaster/casino-images/eec98bc4-1245-4196-ac9a-ce120cbbf151.jpg","https://cdn.jsdelivr.net/gh/aiguruitmaster/casino-images/e1bfe1fd-d097-4adc-b243-614bee771838.jpg","https://cdn.jsdelivr.net/gh/aiguruitmaster/casino-images/178073c1-5961-40a3-995b-c3398db95aec.jpg","https://cdn.jsdelivr.net/gh/aiguruitmaster/casino-images/7cde2615-576e-4d75-b560-5fbc7a4437f7.jpg","https://cdn.jsdelivr.net/gh/aiguruitmaster/casino-images/СloverFlames.webp","https://cdn.jsdelivr.net/gh/aiguruitmaster/casino-images/sun-of-egypt-5.webp","https://cdn.jsdelivr.net/gh/aiguruitmaster/casino-images/gates-of-olympus-logo.webp","https://cdn.jsdelivr.net/gh/aiguruitmaster/casino-images/6dec49a0-f6bd-4226-90fc-ce91d30b2002.jpg","https://cdn.jsdelivr.net/gh/aiguruitmaster/casino-images/amigo-3-spirit-volcanoes.webp","https://cdn.jsdelivr.net/gh/aiguruitmaster/casino-images/78f570a4-9a1d-48e0-b833-c0bf54fc67ad.jpg"];
+    const slotImagesPool = ["https://cdn.jsdelivr.net/gh/aiguruitmaster/casino-images/78f570a4-9a1d-48e0-b833-c0bf54fc67ad.jpg","https://cdn.jsdelivr.net/gh/aiguruitmaster/casino-images/gates-of-olympus-logo.webp","https://cdn.jsdelivr.net/gh/aiguruitmaster/casino-images/СloverFlames.webp","https://cdn.jsdelivr.net/gh/aiguruitmaster/casino-images/sweet-bonanza-1.png","https://cdn.jsdelivr.net/gh/aiguruitmaster/casino-images/6dec49a0-f6bd-4226-90fc-ce91d30b2002.jpg","https://cdn.jsdelivr.net/gh/aiguruitmaster/casino-images/eec98bc4-1245-4196-ac9a-ce120cbbf151.jpg","https://cdn.jsdelivr.net/gh/aiguruitmaster/casino-images/7cde2615-576e-4d75-b560-5fbc7a4437f7.jpg","https://cdn.jsdelivr.net/gh/aiguruitmaster/casino-images/e1bfe1fd-d097-4adc-b243-614bee771838.jpg","https://cdn.jsdelivr.net/gh/aiguruitmaster/casino-images/sun-of-egypt-5.webp","https://cdn.jsdelivr.net/gh/aiguruitmaster/casino-images/178073c1-5961-40a3-995b-c3398db95aec.jpg","https://cdn.jsdelivr.net/gh/aiguruitmaster/casino-images/amigo-3-spirit-volcanoes.webp","https://cdn.jsdelivr.net/gh/aiguruitmaster/casino-images/e7fb81e6-a23d-4fbf-a147-9f1f718eb555.jpg"];
     const slotPlaceholders = document.querySelectorAll('.auto-slot-img');
     
     if (slotPlaceholders.length > 0) {
