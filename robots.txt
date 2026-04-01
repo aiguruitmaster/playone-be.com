@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://playone-be.com/sitemap.xml
